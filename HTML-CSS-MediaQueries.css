@@ -1,0 +1,93 @@
+
+/* A media query in CSS is a CSS3 feature that allows you to apply different styles based on the characteristics of the user's device, such as screen size, screen resolution, and screen density. 
+
+The condition can be a range of values for different characteristics of the device, such as:
+
+min-width: styles will be applied when the width of the viewport is greater than or equal to a specific value.
+max-width: styles will be applied when the width of the viewport is less than or equal to a specific value.
+min-height: styles will be applied when the height of the viewport is greater than or equal to a specific value.
+max-height: styles will be applied when the height of the viewport is less than or equal to a specific value.
+min-resolution: styles will be applied when the resolution of the device is greater than or equal to a specific value.
+max-resolution: styles will be applied when the resolution of the device is less than or equal to a specific value.
+orientation: styles will be applied when the device is in a specific orientation (landscape or portrait). */
+
+
+
+/* Basic layout styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Default styles for header */
+header {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Default styles for section */
+section {
+    padding: 1em;
+}
+
+/* Default styles for footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 1em;
+    text-align: center;
+}
+/* 
+The media query @media (max-width: 600px) is used to apply styles for screens that have a maximum width of 600 pixels. Inside the media query, the styles for the <header>, <section>, and <footer> elements are overridden to adjust for smaller screens.
+
+For example, the background color of the header changes from #333 to #ff0000 and the padding for the section and footer decreases from 1em to 0.5em. */
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Styles for header on small screens */
+    header {
+        background-color: #ff0000;
+        color: #333;
+    }
+
+    /* Styles for section on small screens */
+    section {
+        padding: 0.5em;
+    }
+
+    /* Styles for footer on small screens */
+    footer {
+        padding: 0.5em;
+    }
+}
+
+/* Multiple media-queries */
+/* In this example, the first media query is checking for screens that have a minimum width of 1200px, when the width of the screen is greater than or equal to 1200px, the background color of the body changes to red.
+
+The second media query is checking for screens that have a minimum width of 700px and a maximum width of 1199px, when the width of the screen is between these two values, the background color of the body changes to green.
+
+The third media query is checking for screens that have a maximum width of 699px, when the width of the screen is less than 700px, the background color of the body changes to blue.
+ */
+
+/* Media query for screens greater than or equal to 1200px */
+@media (min-width: 1200px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* Media query for screens greater than or equal to 700px and less than 1200px */
+@media (min-width: 700px) and (max-width: 1199px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* Media query for screens less than 700px */
+@media (max-width: 699px) {
+    body {
+        background-color: blue;
+    }
+}
